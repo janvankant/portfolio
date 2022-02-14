@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Yanone+Kaffeesatz&family=Zen+Kurenaido&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* font-family: 'Fjalla One', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif; */
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url("https://picsum.photos/1920/1080");
+}
+
+/* NAVIGATION */
+
+.logo {
+    margin: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+    background: hsl(0 0% 0% / 0.6);
+}
+
+.nav-list a, .dropdown-btn{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.nav-list-item::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: .2rem;
+    background-color: white;
+    transition: width 200ms ease-out;
+}
+
+.nav-list-item:hover::after {
+    width: 120%;
+}
+
+.dropdown-btn:hover{
+    cursor: pointer;
+}
+
+.dropdown-padding {
+    position: absolute;
+    padding-top: 2.2rem;
+    width: 100px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    margin-left: -1.5rem;
+}
+
+.dropdown-content a {
+    padding: 1rem 2rem;
+    background: hsl(0 0% 0% / 0.6);
+    transition: background-color 250ms ease-in-out,
+                color 250ms ease-in-out;
+}
+
+.dropdown-content a:hover {
+    color: black;
+    background-color: hsl(0 0% 100% / 0.6);
+}
+
+@supports (backdrop-filter: blur(1rem)){
+    .nav-list {
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+
+
+
+/* NAVIGATION SMALL SCREENS */
+@media (max-width: 35em){
+    .nav-list {
+        position: fixed;
+        z-index: 900;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        gap: 2rem;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-in-out;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url("img/icon-close.png");
+    }
+
+    .nav-list[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        background: url("img/icon-hamburger.png");
+        background-size:cover;
+        border: none;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .nav-list-item::after {
+        transition: width 350ms ease-out;
+    }
+
+    .nav-list-item:hover::after {
+        width: 85%;
+    }
+}
+
+/* NAVIGATION LARGER SCREENS */
+@media (min-width: 35em) {
+    .nav-list {
+        gap: clamp(1.5rem, 5vw, 8rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 10vw,20rem);
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: flex;
+    }
+}
+
+/* PROJECTS */
+
+/* VIDEO PROJECTS */
+
+#video-projects {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.video-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-card:hover {
+    cursor: pointer;
+}
+
+.video-card > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video-card > .video-text {
+    position: absolute;
+    inset: 0;
+    padding: clamp(1rem, 10vw, 4rem);
+    background: rgba(255,255,255,.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video-text > h5{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2rem;
+}
+
+.video-card > img, .video-card > .video-text {
+    transition: 200ms ease-in-out;
+}
+
+.video-card:hover > img.blur {
+    filter: blur(.5rem);
+}
+
+.video-card:hover > img.grey {
+    filter: grayscale(1);
+}
+
+.video-card > .video-text.fade {
+    opacity: 0;
+}
+
+.video-card:hover > .video-text.fade {
+    opacity: 1;
+}
+
+.video-card > .video-text.slide-up {
+    transform: translateY(100%);
+}
+
+.video-card:hover > .video-text.slide-up {
+    transform: translateY(0);
+}
+
+
+
+
+
+/* .video-card-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+
+.video-card {
+    width: clamp(300px, 30%, 500px);
+    padding: 1rem;
+    background-color: white;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.3;
+}
+
+.thumb-wrapper img {
+    width: 100%;
+}
+
+.video-text h5 {
+    padding-block: 1rem;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.5rem;
+
+} */
