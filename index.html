@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <title>Blackbird Media</title>
 </head>
 
@@ -26,255 +27,249 @@
                 </div>
             </div>
             <a href="#about">About</a>
-            <!-- <a href="">###</a> -->
         </nav>
     </header>
 
+    <main>
+        <div id="landingpage" class="landingpage">
+            <h1 class="main-title">Blackbird Media</h1>
 
-    <!-- <header>
-        <img class="logo" src="img/blackbird.png" alt="" height="50px">
-        <button class="mobile-nav-toggle" aria-expanded="false"></button>
-        <nav id="navigation" class="nav-list" data-visible="false">
-            <a class="nav-list-item" href="">Home</a>
-            <div class="nav-list-item dropdown">
-                <a class="dropdown-btn">Projects</a>
-                <div class="dropdown-padding">
-                    <div class="dropdown-content">
-                        <a href="">Games</a>
-                        <a href="">Videos</a>
-                        <a href="">Design</a>
+        </div>
+
+
+        <div id="projects" class="projects">
+            <h2>Projects</h2>
+
+            <div id="webDev-projects">
+                <div class="content-wrapper">
+                    <div class="h2-wrap h2-web">
+                        <h2>Web Development</h2>
+                    </div>
+                    <div class="card-container">
+                        <a href="https://janvankant.github.io/browsergames/pages/hangman.html" target="_blank"
+                            class="card" onclick="showOverlay(this)">
+                            <img src="/img/hangman-300.jpg" alt="thumb-hangman">
+                            <h3>Hangman</h3>
+                            <p>Click to view</p>
+                        </a>
+                        <a href="https://janvankant.github.io/browsergames/pages/memory.html" target="_blank"
+                            class="card" onclick="showOverlay(this)">
+                            <img src="img/memory-300.jpg" alt="thumb-memory">
+                            <h3>Memory</h3>
+                            <p>Click to view</p>
+                        </a>
+                        <a href="https://janvankant.github.io/browsergames/pages/mastermind.html" target="_blank"
+                            class="card" onclick="showOverlay(this)">
+                            <img src="img/mastermind-300.jpg" alt="thumb-mastermind">
+                            <h3>Mastermind</h3>
+                            <p>Click to view</p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <a class="nav-list-item" href="">About</a>
-        </nav>
-    </header> -->
 
-
-    <div id="landingpage" class="landingpage">
-        <h1 class="main-title">Blackbird Media</h1>
-
-    </div>
-
-
-    <div id="projects" class="projects">
-        <h2>Projects</h2>
-
-        <div id="webDev-projects">
-            <div class="content-wrapper">
-                <div class="h2-wrap h2-web">
-                    <h2>Web Development</h2>
-                </div>
-                <div class="card-container">
-                    <a href="https://janvankant.github.io/browsergames/pages/hangman.html" target="_blank" class="card"
-                        onclick="showOverlay(this)">
-                        <img src="/img/hangman-300.jpg" alt="thumb-hangman">
-                        <h3>Hangman</h3>
-                        <p>Click to view</p>
-                    </a>
-                    <a href="https://janvankant.github.io/browsergames/pages/memory.html" target="_blank" class="card"
-                        onclick="showOverlay(this)">
-                        <img src="img/memory-300.jpg" alt="thumb-memory">
-                        <h3>Memory</h3>
-                        <p>Click to view</p>
-                    </a>
-                    <a href="https://janvankant.github.io/browsergames/pages/mastermind.html" target="_blank"
-                        class="card" onclick="showOverlay(this)">
-                        <img src="img/mastermind-300.jpg" alt="thumb-mastermind">
-                        <h3>Mastermind</h3>
-                        <p>Click to view</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="video-projects">
-            <div class="content-wrapper">
-                <div class="h2-wrap h2-video">
-                    <h2>Video Production</h2>
-                </div>
-                <div class="card-container">
-                    <div class="card" onclick="showOverlay(this)" name="veemarkt">
-                        <img src="img/Veemarkt-samen-500.png" width="300" alt="thumb-veemarkt">
-                        <h3>Veemarkt Samen</h3>
-                        <p>Click to view</p>
+            <div id="video-projects">
+                <div class="content-wrapper">
+                    <div class="h2-wrap h2-video">
+                        <h2>Video Production</h2>
                     </div>
-                    <div class="card" onclick="showOverlay(this)" name="tn">
-                        <img src="img/tn_promo-500.png" width="300" alt="thumb-nijhuis">
-                        <h3>Team Nijhuis</h3>
-                        <p>Click to view</p>
+                    <div class="card-container">
+                        <div class="card" onclick="showOverlay(this)" name="veemarkt">
+                            <img src="img/Veemarkt-samen-500.png" width="300" alt="thumb-veemarkt">
+                            <h3>Veemarkt Samen</h3>
+                            <p>Click to view</p>
+                        </div>
+                        <div class="card" onclick="showOverlay(this)" name="tn">
+                            <img src="img/tn_promo-500.png" width="300" alt="thumb-nijhuis">
+                            <h3>Team Nijhuis</h3>
+                            <p>Click to view</p>
+                        </div>
+                        <div class="card" onclick="showOverlay(this)" name="mintlab">
+                            <img src="img/mintlab-500.jpg" width="300" alt="thumb-mintlab">
+                            <h3>MINT Lab auf Schlössern</h3>
+                            <p>Click to view</p>
+                        </div>
+                        <div class="card" onclick="showOverlay(this)" name="endog">
+                            <img src="img/endogenous-500.png" width="300" alt="thumb-endogenous">
+                            <h3>Endogenous</h3>
+                            <p>Click to view</p>
+                        </div>
+
                     </div>
-                    <div class="card" onclick="showOverlay(this)" name="mintlab">
-                        <img src="img/mintlab-500.jpg" width="300" alt="thumb-mintlab">
-                        <h3>MINT Lab auf Schlössern / in Kastelen</h3>
-                        <p>Click to view</p>
+                </div>
+
+            </div>
+
+            <div id="graphicDesign-projects">
+                <div class="content-wrapper">
+                    <div class="h2-wrap h2-graphic">
+                        <h2>Graphic Design</h2>
                     </div>
-                    <div class="card" onclick="showOverlay(this)" name="endog">
-                        <img src="img/endogenous-500.png" width="300" alt="thumb-endogenous">
-                        <h3>Endogenous</h3>
-                        <p>Click to view</p>
+                    <div class="card-container">
+                        <div class="card" onclick="showOverlay(this)" name="reviuz">
+                            <img src="img/Reviuz-folder-mockup-700.jpg" width="300" name="reviuz" alt="thumb-reviuz">
+                            <h3>Reviuz Brand Styling</h3>
+                            <p>Click to view</p>
+                        </div>
+                        <!-- <div class="card" onclick="showOverlay(this)">
+                            <img src="https://picsum.photos/300?random=8" name="" alt="">
+                            <h3>Title</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                        <div class="card" onclick="showOverlay(this)">
+                            <img src="https://picsum.photos/300?random=9" name="" alt="">
+                            <h3>Title</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div> -->
                     </div>
-
                 </div>
             </div>
 
-        </div>
-
-        <div id="graphicDesign-projects">
-            <div class="content-wrapper">
-                <div class="h2-wrap h2-graphic">
-                    <h2>Graphic Design</h2>
-                </div>
-                <div class="card-container">
-                    <div class="card" onclick="showOverlay(this)">
-                        <img src="img/Reviuz-folder-mockup-700.jpg" width="300" name="reviuz" alt="thumb-reviuz">
-                        <h3>Reviuz Brand Styling</h3>
-                        <p>Click to view</p>
+            <div class="overlay-wrapper hidden" name="veemarkt">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>Veemarkt Samen - Provincie Utrecht</h2>
+                        <p>Veemarkt Samen is een burgerinitiatief dat zich moeit met de invulling van het gebied rondom
+                            Fort Voordorp, ook wel de Voorveldse Weide. Deze animatievideo is in opdracht van de
+                            Provincie Utrecht tot stand gekomen. Alles in de video is handgetekend in Adobe Photoshop en
+                            geanimeerd in Adobe After Effects.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ke23T_XpgX0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <!-- <div class="card" onclick="showOverlay(this)">
-                        <img src="https://picsum.photos/300?random=8" name="" alt="">
-                        <h3>Title</h3>
-                        <p>Lorem, ipsum dolor.</p>
+                </div>
+            </div>
+            <div class="overlay-wrapper hidden" name="tn">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>Promo - Team Nijhuis</h2>
+                        <p>Iets compleet anders, maar wel binnen de huisstijlregels. Dat zijn de leuke opdrachten!
+                            Collega Chris wilde het graag een beetje hipper en trendy zien, daarom ging ik helemaal los
+                            om Team Nijhuis wat meer energie te geven. Daaruit volgde deze video, dat binnen het bedrijf
+                            met lof werd ontvangen.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/n8Si9DQ5LCA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <div class="card" onclick="showOverlay(this)">
-                        <img src="https://picsum.photos/300?random=9" name="" alt="">
-                        <h3>Title</h3>
-                        <p>Lorem, ipsum dolor.</p>
-                    </div> -->
                 </div>
             </div>
-        </div>
 
-        <div class="overlay-wrapper hidden" name="veemarkt">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>Veemarkt Samen - Provincie Utrecht</h2>
-                    <p>Veemarkt Samen is een burgerinitiatief dat zich moeit met de invulling van het gebied rondom
-                        Fort Voordorp, ook wel de Voorveldse Weide. Deze animatievideo is in opdracht van de
-                        Provincie Utrecht tot stand gekomen. Alles in de video is handgetekend in Adobe Photoshop en
-                        geanimeerd in Adobe After Effects.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ke23T_XpgX0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="overlay-wrapper hidden" name="mintlab">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>MINT Lab auf Schlössern / in Kastelen</h2>
+                        <p>MINT-Lab is een grensoverschrijdende samenwerking tussen Duitse en Nederlandse scholieren. Om
+                            Duitse
+                            en Nederlandse scholieren techniek en natuurwetenschappen in beide landen te laten beleven
+                            werken
+                            zij als internationaal team samen en organiseren en coördineren zij de samenwerkingen tussen
+                            beide
+                            landen, evenals de experimenten voor de scholieren. </p>
+                        <iframe width="580" height="326" src="https://www.youtube.com/embed/mT8KZm5GlwA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p>De video's voor MINT Lab bestaan uit sfeerimpressies en interviews. Het uiteindelijke doel
+                            van de
+                            video's is om meer samenwerkingsverbanden op te zetten tussen verschillende scholen en MINT
+                            Lab.
+                            Tijdens mijn dienstverband bij Team Nijhuis ben ik meermalen op locatie geweest om de
+                            interviews
+                            af
+                            te nemen en de beelden te schieten. </p>
+                        <iframe width="580" height="326" src="https://www.youtube.com/embed/SQRmWNpi-FQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="overlay-wrapper hidden" name="tn">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>Promo - Team Nijhuis</h2>
-                    <p>Iets compleet anders, maar wel binnen de huisstijlregels. Dat zijn de leuke opdrachten!
-                        Collega Chris wilde het graag een beetje hipper en trendy zien, daarom ging ik helemaal los
-                        om Team Nijhuis wat meer energie te geven. Daaruit volgde deze video, dat binnen het bedrijf
-                        met lof werd ontvangen.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n8Si9DQ5LCA"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+
+            <div class="overlay-wrapper hidden" name="endog">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>Endogenous - Personal project</h2>
+                        <p>During the Skilled minor at Saxion, all creativity was allowed to run free. This resulted
+                            in an abstract and very personal video. My main goal was to convey certain emotions and
+                            feelings onto the viewer.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/n26UbbYKq0Y"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="overlay-wrapper hidden" name="mintlab">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>MINT Lab auf Schlössern / in Kastelen</h2>
-                    <p>MINT-Lab is een grensoverschrijdende samenwerking tussen Duitse en Nederlandse scholieren. Om
-                        Duitse
-                        en Nederlandse scholieren techniek en natuurwetenschappen in beide landen te laten beleven
-                        werken
-                        zij als internationaal team samen en organiseren en coördineren zij de samenwerkingen tussen
-                        beide
-                        landen, evenals de experimenten voor de scholieren. </p>
-                    <iframe width="580" height="326" src="https://www.youtube.com/embed/mT8KZm5GlwA"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>De video's voor MINT Lab bestaan uit sfeerimpressies en interviews. Het uiteindelijke doel van de
-                        video's is om meer samenwerkingsverbanden op te zetten tussen verschillende scholen en MINT Lab.
-                        Tijdens mijn dienstverband bij Team Nijhuis ben ik meermalen op locatie geweest om de interviews
-                        af
-                        te nemen en de beelden te schieten. </p>
-                    <iframe width="580" height="326" src="https://www.youtube.com/embed/SQRmWNpi-FQ"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="overlay-wrapper hidden" name="reviuz">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>Reviuz - Brand Styling</h2>
+                        <img src="img/Reviuz-folder-mockup-1024x723.jpg" alt="reviuz-folder-mockup">
+                        <p>This Dutch one-man company deals in clean and healthy drinking water. It provides its
+                            customers
+                            with tap
+                            water filters, including installation and maintenance. The main selling point is: pure
+                            drinking
+                            water that
+                            fits within a healthy lifestyle.
+                            I made a complete brand style for this newly created company, including a logo, a brochure
+                            and a
+                            brand style
+                            guide. In the future, a website might be added to this.</p>
+                        <img src="img/Style-Guide-Reviuz-416x1024.jpg" alt="reviuz-styleguide">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="overlay-wrapper hidden" name="endog">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>Endogenous - Personal project</h2>
-                    <p>During the Skilled minor at Saxion, all creativity was allowed to run free. This resulted
-                        in an abstract and very personal video. My main goal was to convey certain emotions and
-                        feelings onto the viewer.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n26UbbYKq0Y"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+
+            <div class="overlay-wrapper hidden" name="placeholder">
+                <div class="overlay-content-wrapper hidden">
+                    <div class="overlay-content ">
+                        <h2>Placeholder Title</h2>
+                        <p>Placeholder p: Lorem ipsum dolor sit amet consectetur adipisicing elit. In, praesentium?</p>
+                        <iframe src="" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
 
-        <div class="overlay-wrapper hidden" name="reviuz">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>Reviuz - Brand Styling</h2>
-                    <p>This Dutch one-man company deals in clean and healthy drinking water. It provides its customers
-                        with tap
-                        water filters, including installation and maintenance. The main selling point is: pure drinking
-                        water that
-                        fits within a healthy lifestyle.
-                        I made a complete brand style for this newly created company, including a logo, a brochure and a
-                        brand style
-                        guide. In the future, a website might be added to this.</p>
-                    <iframe src="" frameborder="0"></iframe>
+
+
+
+        <div id="about" class="about">
+            <h2>About</h2>
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <div class="about-photo">
+                        <img src="img/profiel-round.png" width="400" alt="">
+                    </div>
+                    <h2>Ik ben <span>Merel Verdegaal,</span> een <span>developer</span> en <span>designer</span> uit
+                        <span>Leuven</span>
+                    </h2>
+                </div>
+                <div class="about-text">
+                    <p>Ik heb net mijn opleiding Hybride Apps Development
+                        afgerond, waar ik HTML, CSS, Javascript, Angular, SQL en nog veel meer heb mogen
+                        leren. Daarom ben ik nu dan ook op zoek naar een nieuwe uitdaging als
+                        web developer. Mijn achtergrond is in video en grafisch en ik zou graag
+                        deze onderwerpen samenbrengen in mijn nieuwe job. Ik ben onwijs
+                        leergierig en nieuwsgierig naar de nieuwste ontwikkelingen binnen
+                        design en development, en kan snel schakelen tussen verschillende
+                        media. Ik ben momenteel op zoek naar een veelzijdige en uitdagende
+                        job waarbinnen mijn werkzaamheden er echt toe doen.</p>
+
                 </div>
             </div>
+
+
         </div>
+    </main>
 
 
-        <div class="overlay-wrapper hidden" name="placeholder">
-            <div class="overlay-content-wrapper hidden">
-                <div class="overlay-content ">
-                    <h2>Placeholder Title</h2>
-                    <p>Placeholder p: Lorem ipsum dolor sit amet consectetur adipisicing elit. In, praesentium?</p>
-                    <iframe src="" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-
-
-
-    <div id="about" class="about">
-        <h2>About</h2>
-        <div class="about-content">
-            <div class="about-photo">
-                <img src="img/profiel-round.png" width="400" alt="">
-            </div>
-            <h2>Ik ben <span>Merel Verdegaal,</span> een <span>developer</span> en <span>designer</span> uit
-                <span>Leuven</span>
-            </h2>
-        </div>
-        <div class="about-text">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam quos, dignissimos ea est
-                consequuntur nemo ad facilis deserunt odio?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam quos, dignissimos ea est
-                consequuntur nemo ad facilis deserunt odio?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam quos, dignissimos ea est
-                consequuntur nemo ad facilis deserunt odio?</p>
-        </div>
-    </div>
-
-    <!-- <footer class="footer">&copy; Blackbird Media</footer> -->
+    <footer class="footer">&copy; Blackbird Media 2022</footer>
 
 
     <script src="index.js"></script>

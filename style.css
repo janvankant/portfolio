@@ -4,15 +4,21 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* font-family: 'Fjalla One', sans-serif;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-family: 'Zen Kurenaido', sans-serif; */
 }
 
 body {
   overflow-x: hidden;
   background-image: url("https://picsum.photos/1920/1080");
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -134,6 +140,9 @@ header {
     top: .7rem;
     right: 2rem;
   }
+  .mobile-nav-togglehover {
+    cursor: pointer;
+  }
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("img/icon-close.png");
   }
@@ -152,6 +161,12 @@ header {
     background-color: black;
     border: none;
   }
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .landingpage {
@@ -197,7 +212,7 @@ header {
 }
 
 .projects {
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: black;
   color: white;
 }
@@ -225,6 +240,13 @@ header {
   font-family: "Fjalla One", sans-serif;
   font-size: 1.5rem;
   padding: 1rem 0;
+  -webkit-transition: margin .3s ease;
+  transition: margin .3s ease;
+}
+
+.h2-wrap:hover {
+  cursor: pointer;
+  margin: 0 0 2rem;
 }
 
 .h2-wrap:active {
@@ -366,11 +388,19 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
   color: black;
 }
 
 .overlay-wrapper > .overlay-content-wrapper > .overlay-content > iframe {
   width: 100%;
+}
+
+.overlay-wrapper > .overlay-content-wrapper > .overlay-content > img {
+  width: 100%;
+  max-width: 600px;
 }
 
 .overlay-wrapper > .overlay-content-wrapper.hidden {
@@ -393,20 +423,26 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 3rem;
   }
   .overlay-content > h2 {
     font-size: 3rem;
-  }
-  .overlay-content > p {
-    max-width: 75%;
-  }
-  .overlay-content > iframe {
-    max-width: 75%;
   }
 }
 
 .about {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 1rem;
 }
 
 .about > h2 {
@@ -449,14 +485,13 @@ header {
   width: 80%;
 }
 
-.about-text {
-  padding: 1rem;
-}
-
 @media (min-width: 35rem) {
   .about h2 {
     width: 60%;
     margin: 0 auto;
+  }
+  .about-wrapper {
+    width: 60%;
   }
   .about-content {
     -webkit-box-orient: horizontal;
@@ -464,21 +499,18 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 10vw;
-    width: 60%;
     margin: 0 auto;
   }
   .about-photo > img {
     width: 350px;
   }
   .about-text {
-    width: 60%;
+    width: 75%;
     margin: 2rem auto;
   }
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

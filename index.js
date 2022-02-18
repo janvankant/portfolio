@@ -1,3 +1,11 @@
+// const express = require("express");
+// const app = express();
+
+// app.use(cors({
+//     origin: "*"
+// }))
+
+
 var nav = document.getElementById("navigation");
 var navToggle = document.querySelector(".mobile-nav-toggle");
 
@@ -56,46 +64,3 @@ function showOverlay(element) {
         }
     });
 }
-
-
-
-
-// const heightOutput = document.querySelector('#height');
-// const widthOutput = document.querySelector('#width');
-
-// function reportWindowSize() {
-
-//     heightOutput.textContent = window.innerHeight;
-//     widthOutput.textContent = window.innerWidth;
-// }
-
-// window.onresize = reportWindowSize;
-
-
-// function changeEventListeners() {
-//     console.log(window.innerWidth);
-//     if (window.innerWidth < 560) {
-//         document.querySelectorAll(".h2-wrap").forEach(h2 => {
-//             h2.addEventListener("click", function addListener() {
-//                 if (!h2Toggle) {
-//                     // console.log(h2.nextElementSibling.children);
-//                     h2.nextElementSibling.style.transform = "scaleY(1)";
-//                     h2.nextElementSibling.style.margin = "3rem 0";
-//                     let childArr = h2.nextElementSibling.children;
-//                     for (let i = 0; i < childArr.length; i++) {
-//                         childArr[i].style.display = "flex";
-//                     }
-//                     h2Toggle = true;
-//                 } else {
-//                     h2.nextElementSibling.style.transform = "scaleY(0)";
-//                     h2.nextElementSibling.style.margin = "0";
-//                     let childArr = h2.nextElementSibling.children;
-//                     for (let i = 0; i < childArr.length; i++) {
-//                         childArr[i].style.display = "none";
-//                     }
-//                     h2Toggle = false;
-//                 }
-//             });
-//         });
-//     }
-// }
