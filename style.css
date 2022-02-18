@@ -7,9 +7,6 @@
 }
 
 body {
-  overflow-x: hidden;
-  background-image: url("https://picsum.photos/1920/1080");
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,6 +176,9 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-x: hidden;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-repeat: no-repeat;
   height: calc(100vh - 5rem);
 }
 
@@ -259,6 +259,14 @@ main {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
 
+.h2-wrap > h2[data-visible="true"] > span > .fa-angle-right {
+  display: none;
+}
+
+.h2-wrap > h2[data-visible="false"] > span > .fa-angle-down {
+  display: none;
+}
+
 .h2-video {
   background-color: #0037ff;
 }
@@ -328,6 +336,9 @@ main {
 }
 
 @media (min-width: 35rem) {
+  h2 > span {
+    display: none;
+  }
   .content-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

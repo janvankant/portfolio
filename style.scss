@@ -12,9 +12,7 @@ $font-head: 'Fjalla One', sans-serif;
 }
 
 body {
-    overflow-x: hidden;
-    background-image: url("https://picsum.photos/1920/1080");
-    background-repeat: no-repeat;
+    
 
     display: flex;
     flex-direction: column;
@@ -162,6 +160,9 @@ main {
     align-items: center;
     justify-content: center;
 
+    overflow-x: hidden;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-repeat: no-repeat;
     height: calc(100vh - 5rem);
     // height: calc(100vh-3rem);
 }
@@ -236,6 +237,12 @@ main {
         color: transparent;
         text-shadow: 1px 1px  rgba(255,255,255,0.5);
     }
+    > h2[data-visible="true"] > span > .fa-angle-right {
+        display: none;
+    }
+    > h2[data-visible="false"] > span > .fa-angle-down {
+        display: none;
+    }
 }
 
 .h2-video{
@@ -291,6 +298,10 @@ main {
 }
 
 @media (min-width: 35rem) {
+    h2 > span  {
+        display: none;
+    }
+
     .content-wrapper {
         flex-direction: row;
         border-bottom: 3px solid white;

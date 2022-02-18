@@ -8,9 +8,17 @@
 
 var nav = document.getElementById("navigation");
 var navToggle = document.querySelector(".mobile-nav-toggle");
+var navList = nav.children;
+var toggleh2 = document.querySelectorAll(".h2-wrap");
 
-navToggle.addEventListener("click", () => {
-    var visibility = nav.getAttribute("data-visible");
+navToggle.addEventListener("click", hamburgerMenu);
+
+for (let i = 0; i < navList.length; i++) {
+    navList[i].addEventListener("click", hamburgerMenu);
+}
+
+function hamburgerMenu() {
+    let visibility = nav.getAttribute("data-visible");
     if (visibility === "false") {
         nav.setAttribute("data-visible", true);
         navToggle.setAttribute("aria-expanded", true);
@@ -19,7 +27,21 @@ navToggle.addEventListener("click", () => {
         navToggle.setAttribute("aria-expanded", false);
 
     }
-});
+}
+
+for (let i = 0; i < toggleh2.length; i++) {
+    toggleh2[i].children[0].addEventListener("click", () => {
+        let visibility = toggleh2[i].children[0].getAttribute("data-visible");
+        console.log(visibility);
+        if (visibility === "false") {
+            toggleh2[i].children[0].setAttribute("data-visible", true);
+        } else if (visibility === "true") {
+            toggleh2[i].children[0].setAttribute("data-visible", false);
+        }
+    });
+
+}
+
 
 // toggle small screen buttons
 var h2Toggle = false;
