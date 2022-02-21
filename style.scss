@@ -298,7 +298,7 @@ main {
 }
 
 @media (min-width: 35rem) {
-    h2 > span  {
+    .h2-wrap > h2 > span  {
         display: none;
     }
 
@@ -478,6 +478,7 @@ main {
     justify-content: center;
     width: 100%;
     height: 4rem;
+    margin-top: 5rem;
     
     background-color: black;
     color: white;
